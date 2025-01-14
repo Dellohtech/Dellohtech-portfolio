@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #b6350a, #0b1112);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #b6350a, #0b1112);
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Hire Me Section */
+        .hire-me {
+            text-align: center;
+            background-color: #030303;
+            color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .hire-btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .hire-btn:hover {
+            background-color: #218838;
+        }
+
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(to right, #b6350a, #0b1112); 
+    padding: 1rem 0;
+}
+
+/* Basic nav styling */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+  gap: -100px; /* Space between links */
+}
+
+nav ul li {
+  margin: 10px 20px; /* Space out the links */
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #288e09;
+  border-radius: 9px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  nav ul {
+    justify-content: center; /* Center the links */
+    gap: 10px; /* Adjust gap between links */
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row; /* Stack links vertically */
+    gap: 10px; /* Adjust space between stacked items */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Adjust spacing between items when stacked */
+  }
+
+  nav ul li a {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 0.9rem; /* Further reduce font size for very small screens */
+  }
+}
+
+
+
+
+
+
+/* Portfolio Styles */
+.portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .project {
+            background: linear-gradient(to right, #16a309, #188fa4); 
+            border-radius: 10px;
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(42, 7, 216, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.6s forwards;
+        }
+
+        /* Animation for project cards */
+        .project:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .project:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .project:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .project:nth-child(4) {
+            animation-delay: 0.7s;
+        }
+
+        .project:nth-child(5) {
+            animation-delay: 0.9s;
+        }
+
+        .project:nth-child(6) {
+            animation-delay: 1.1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project h2 {
+            font-size: 1.6em;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #2807ca;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .project p {
+            font-size: 1em;
+            color: #090909;
+            margin-bottom: 20px;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(5, 206, 52, 0.1);
+            background-color: #bd1f1f;
+        }
+
+        .project:hover h2 {
+            color: #d3dbe3; /* Change title color on hover */
+        }
+
+        .project:hover p {
+            color: #000000;
+        }
+
+        /* Hover effect on the portfolio section */
+        .portfolio:hover {
+            transform: scale(1.05); /* Stretch effect on hover */
+        }
+
+        /* Hire Me Section */
+        .hire-me {
+            background-color: #c42d0b;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-top: 50px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .hire-me h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .hire-me p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .hire-btn {
+            background-color: #12b5d2;
+            color: rgb(0, 0, 0);
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hire-btn:hover {
+            background-color: #d50b1c;
+            transform: scale(1.1); /* Scale up button on hover */
+        }
+
+        .hire-me:hover {
+            background-color: #0f1010; /* Darker blue for the Hire Me section */
+        }
+
+
+        /* Styling for the images in each project */
+.project-img {
+    width: 100%;      /* Makes the image responsive */
+    max-width: 600px; /* Limit the max size of the image */
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Ensure the image takes up its own line */
+    margin: 20px auto; /* Center the image and add spacing */
+}
+
+/* Portfolio Section */
+.portfolio {
+    margin: 40px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+
+    </style>
+
+ <!-- Navigation Bar -->
+ <header>
+    <nav>
+      <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="know.html">About</a></li>
+        <li><a href="hireme.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="chart.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+</head>
+<body>
+
+    <!-- Portfolio Content -->
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Here are some of my best works</p>
+    
+    
+    </header>
+
+    <section class="portfolio">
+        <!-- Software Engineering Projects -->
+        <div class="project">
+            <h2>Project 1: Web Application for Task Management</h2>
+            <img src="ded.jpg" alt="Task Management Web Application" class="project-img">
+            <p>A web-based task management tool built with React.js and Node.js. This project allows users to organize tasks, set deadlines, and collaborate with teammates. The backend is powered by Express.js and MongoDB for data storage.</p>
+        </div>
+        <div class="project">
+            <h2>Project 2: E-commerce Platform</h2>
+            <img src="eCommerce_Platform_Pic_2000x.webp" alt="E-commerce Platform" class="project-img">
+            <p>Developed a fully functional e-commerce website using Django and PostgreSQL. Features include user authentication, product management, and secure payment integration. I focused on implementing a clean, user-friendly UI and optimizing for mobile responsiveness.</p>
+        </div>
+    
+        <!-- Ethical Hacking Projects -->
+        <div class="project">
+            <h2>Project 3: Penetration Testing for Corporate Website</h2>
+            <img src="pen-test.jpg" alt="Penetration Testing for Corporate Website" class="project-img">
+            <p>Conducted a comprehensive security audit and penetration testing for a corporate website to identify vulnerabilities. Delivered a detailed report including recommendations for mitigating risks such as SQL injection, XSS, and improper server configurations.</p>
+        </div>
+        <div class="project">
+            <h2>Project 4: Vulnerability Scanning Tool</h2>
+            <img src="vulnerability-scanning-tool.jpg" alt="Vulnerability Scanning Tool" class="project-img">
+            <p>Developed a custom Python-based vulnerability scanning tool that scans websites for common security flaws. Integrated with APIs to test for OWASP top 10 vulnerabilities and generates automated reports.</p>
+        </div>
+    
+        <!-- Design Projects -->
+        <div class="project">
+            <h2>Project 5: UI/UX Design for Mobile App</h2>
+            <img src="mobile-app-design.jpg" alt="UI/UX Design for Mobile App" class="project-img">
+            <p>Designed the user interface and user experience for a mobile app focused on fitness tracking. Using Figma, I created wireframes, interactive prototypes, and design systems to ensure a seamless user experience. Conducted usability testing to optimize the design.</p>
+        </div>
+        <div class="project">
+            <h2>Project 6: Logo Design for Startup</h2>
+            <img src="logo-design.jpg" alt="Logo Design for Startup" class="project-img">
+            <p>Created a modern and minimalist logo for a tech startup. The logo captures the essence of the brand through clean lines and a unique color palette. Delivered multiple design iterations and refined the design based on client feedback.</p>
+        </div>
+    </section>
+    
+    
+
+<!-- Hire Me Section -->
+<section class="hire-me">
+    <h2>Hire Me</h2>
+    <p>If you are interested in collaborating with me, feel free to reach out!</p>
+    <!-- WhatsApp link -->
+    <a href="https://wa.me/254114732645" class="hire-btn" target="_blank">Hire Me on WhatsApp</a>
+</section>
+
+    
+
+</body>
+</html>

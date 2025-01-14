@@ -1,0 +1,544 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(to right, #b6350a, #0b1112);  
+    color: #333;
+}
+
+/* Header / Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #b6350a, #0b1112);  
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+/* Bounce Effect with Brightness */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+      filter: brightness(1); /* Normal brightness */
+    }
+    50% {
+      transform: translateY(-10px);
+      filter: brightness(1.5); /* Increase brightness when bouncing */
+    }
+  }
+  
+  .intro-text{
+    animation: bounce 1s ease-in-out infinite;
+    animation-delay: 0s; /* Adjust timing for continuous loop */
+  }
+  
+  /* Fade-In Effect with Brightness */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      filter: brightness(0.5); /* Dimmed at the start */
+    }
+    100% {
+      opacity: 1;
+      filter: brightness(1); /* Normal brightness at the end */
+    }
+  }
+  
+  .intro-text {
+    animation: fadeIn 2s ease-in-out infinite;
+    animation-delay: 2s; /* Delay to synchronize with other animations */
+  }
+  
+  /* Shake Effect with Brightness */
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+      filter: brightness(4); /* Normal brightness */
+    }
+    25% {
+      transform: translateX(-5px);
+      filter: brightness(5.2); /* Slightly brighter during shaking */
+    }
+    50% {
+      transform: translateX(5px);
+      filter: brightness(5.2); /* Slightly brighter during shaking */
+    }
+    75% {
+      transform: translateX(-5px);
+      filter: brightness(5.2); /* Slightly brighter during shaking */
+    }
+    100% {
+      transform: translateX(0);
+      filter: brightness(4); /* Normal brightness */
+    }
+  }
+  
+  .intro-text{
+    animation: shake 0.5s ease-in-out infinite;
+    animation-delay: 4s; /* Delay to synchronize with other animations */
+  }
+  
+  
+  
+
+/* Position the navigation container at the top-right */
+/* Fixed position for the nav bar */
+.nav-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Basic styling for the nav links */
+.nav-link nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.nav-link nav ul li {
+    display: inline-block;
+}
+
+.nav-link nav ul li a {
+    text-decoration: none;
+    color: #dde1e4;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the nav links */
+.nav-link nav ul li a:hover {
+    color: #efd809;
+    text-decoration: gold;
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666, 0 -2px 5px rgba(0,0,0,0.1);
+    transform: translateY(4px);
+    border-radius: 10px;
+}
+
+/* Media query for medium screens and smaller (tablets, phones) */
+@media (max-width: 768px) {
+    .nav-link nav ul {
+        flex-direction: row; /* Stack items vertically */
+        align-items: center; /* Center the items horizontally */
+    }
+
+    .nav-link nav ul li {
+        margin-bottom: 10px; /* Add space between links */
+    }
+
+    .nav-link nav ul li a {
+        font-size: 16px; /* Slightly smaller font size for smaller screens */
+        padding: 8px 12px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Media query for very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    .nav-link {
+        top: 10px;
+        right: 10px; /* Adjust position for very small screens */
+    }
+
+    .nav-link nav ul {
+        flex-direction: row; /* Stack items vertically */
+        align-items: center; /* Center the items horizontally */
+        tex
+    }
+
+    .nav-link nav ul li {
+        margin-bottom: 8px; /* Space between items for better readability */
+    }
+
+    .nav-link nav ul li a {
+        font-size: 14px; /* Even smaller font size for very small screens */
+        padding: 6px 10px; /* Adjust padding for mobile screens */
+    }
+}
+
+/* About Me Section */
+.about-section {
+    padding: 100px 20px; /* Top padding to avoid navbar overlap */
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.about-info h1 {
+    font-size: 2.5rem;
+    color: #fbf9f9;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* General styles for the intro text */
+.intro-text { 
+    font-size: 2.2rem; /* Default font size */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fafafa;
+    line-height: 1.5;
+    margin: 0; /* Remove default margin */
+}
+
+/* Making the text responsive to screen size using media queries */
+@media (max-width: 1200px) {
+    .intro-text {
+        font-size: 2rem; /* Slightly smaller font for large screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .intro-text {
+        font-size: 1.8rem; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-text {
+        font-size: 1.6rem; /* Smaller font for medium devices like smaller tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-text {
+        font-size: 1.4rem; /* Even smaller font for mobile screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .intro-text {
+        font-size: 1.2rem; /* Font size for very small screens */
+    }
+}
+
+
+
+
+
+
+
+.about-image-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.392);
+    transition: transform 0.3s ease;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-image-container:hover .profile-img {
+    transform: scale(1.1);
+}
+
+/* Skills Section */
+.skills-section {
+    background: linear-gradient(to right, #b6350a, #0b1112);  
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #ead5d5;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-card {
+    background: linear-gradient(to right, #940ab6, #0a8fa6);  
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #000000;
+    font-size: 1rem;
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #bd9e07, #1aa0b7);  
+}
+
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.timeline-item {
+    background: linear-gradient(to right, #b6350a, #0b1112);  
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item h3 {
+    font-size: 1.6rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    color: #149dac;
+    font-size: 1.1rem;
+}
+
+/* Hobbies Section */
+.hobbies-section {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #b6350a, #0b1112);  
+    text-align: center;
+}
+
+.hobby-text {
+    font-size: 1.2rem;
+    color: #16b3d2;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #b6350a, #0b1112);  
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skill-card {
+        width: 80%;
+    }
+}
+
+
+
+
+.about-section {
+    position: relative;
+    filter: brightness(50%);
+    height: 100vh; /* Make the section take full viewport height */
+    background-size: cover;/* Ensures the image covers the entire section */
+    background-position: center; /* Keeps the image centered */
+    animation: changeBackground 6s infinite; /* Set animation duration to 6s */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    filter: brightness(0.50); /* Reduces the brightness of the background images to 69% */
+}
+
+@keyframes changeBackground {
+    0% {
+        background-image: url('pexels-pixabay-270557.jpg');
+    }
+    50% {
+        background-image: url('pexels-rahulp9800-1933900.jpg');
+    }
+    100% {
+        background-image: url('pexels-kevin-ku-92347-577585.jpg');
+    }
+}
+
+/* About content */
+.about-content {
+    position: relative;
+    z-index: 2; /* Ensures content stays above the background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Profile image styling */
+.profile-img {
+    width: 250px;
+    height: 250px;
+    margin-top: 50px;
+}
+
+
+
+
+/* Make sure the container takes up full width but smaller height */
+.about-image-container {
+    position: relative;
+    width: 50%;
+    height: auto; /* Adjusted to auto, so it fits the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #050505, #b74b08);  
+    /* Optional, to set a background color */
+    padding: 20px; /* Optional, for spacing around the image */
+}
+
+/* Profile image styles */
+.profile-img {
+    width: 50%; /* Reduced size to 50% of the container width */
+    max-width: 300px; /* Maximum width of the image */
+    height: auto;
+    border-radius: 50%; /* Optional, for a circular image */
+    animation: glow 2s ease-in-out infinite, enlarge 2s ease-in-out infinite;
+}
+
+/* Animation to create the glowing effect */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.5);
+    }
+}
+
+/* Animation for enlarging the image */
+@keyframes enlarge {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Adjust the scale value as desired */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Ensure responsiveness across different screen sizes */
+@media (max-width: 768px) {
+    .profile-img {
+        max-width: 60%; /* Adjusted for slightly smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        max-width: 70%; /* Adjusted for even smaller screens */
+    }
+}
+
+@media (min-width: 375px){
+
+}
+
+
+
+/*names effects */
+
+.highlight {
+    font-weight: bold;
+    color: #4de600; /* Blue color for the highlighted text */
+    text-shadow: 0 0 10px rgba(0, 115, 230, 0.6), 0 0 20px rgba(0, 115, 230, 0.4); /* Subtle glow */
+    animation: glowing 1.5s infinite alternate; /* Live glowing animation */
+  }
+  
+  /* Animation for the glowing effect */
+  @keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px rgba(11, 228, 22, 0.877), 0 0 20px rgba(0, 115, 230, 0.4);
+        color: #d50808;
+    }
+    50% {
+        text-shadow: 0 0 20px rgb(234, 11, 11), 0 0 30px rgba(230, 0, 0, 0.8); /* Stronger glow */
+        color: #ebeaef; /* Slightly lighter blue */
+    }
+    100% {
+        text-shadow: 0 0 10px rgb(15, 226, 19), 0 0 20px rgba(34, 230, 8, 0.623);
+        color: #ff0101;
+    }
+  }
+
+/* For smaller screens, reduce padding */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 15px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        padding: 10px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+}
