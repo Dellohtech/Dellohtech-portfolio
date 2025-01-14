@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #b6350a, #0b1112); 
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #eee9e9;
+        }
+
+        /* Let's Chat Section */
+        #chat-section {
+            background: linear-gradient(to right, #b6350a, #0b1112); 
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #chat-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #chat-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .chat-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chat-form input,
+        .chat-form textarea {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .chat-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .chat-form button {
+            background-color: #ff5733;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .chat-form button:hover {
+            background-color: #e64a19;
+        }
+
+        .chat-form button:disabled {
+            background-color: #bbb;
+            cursor: not-allowed;
+        }
+
+/* Position the navigation container at the top-right */
+.nav-link {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.nav-link nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.nav-link nav ul li {
+  display: inline-block;
+}
+
+.nav-link nav ul li a {
+  text-decoration: none;
+  color: #dde1e4;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-link nav ul li a:hover {
+  color: #efd809;
+  text-decoration: gold;
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666, 0 -2px 5px rgba(0,0,0,0.1);
+  transform: translateY(4px);
+  border-radius: 10px;
+}
+
+
+    </style>
+
+        <!-- Header Section -->
+    
+        <div class="nav-link">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="know.html">About</a></li>
+                    <li><a href="hireme.html">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="chart.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Let's Chat Section -->
+        <section id="chat-section">
+            <h2>Let's Chat!</h2>
+            <p>If you have any questions or just want to talk, feel free to reach out!</p>
+
+            <!-- Contact Form -->
+            <form class="chat-form" action="your-server-endpoint" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
